@@ -18,3 +18,5 @@ categories: VIM Editor
    在该c.vim文件中增加：
    syn keyword cType u8 u16 u32 s8 s16 s32 bool_t
    (增加一个自定义变量，就在后面追加即可)
+   注意：直接在~/.vimrc文件中增加“syn ...”这句话，不可以;
+

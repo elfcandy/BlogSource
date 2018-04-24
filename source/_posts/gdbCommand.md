@@ -3,7 +3,7 @@ title: gdbCommand
 comments: false
 date: 2018-04-19 15:15:34
 tags:
-categories:GDBCommand
+categories: GDBCommand
 ---
 
 

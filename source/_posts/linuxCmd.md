@@ -23,5 +23,17 @@ categories: LinuxCommand
 
 
 2、linux下使用memleak工具来检查内存泄露
+   valgrind工具也可以
+
+
+3、关闭进程命令
+   ps -ef| grep "进程名称"
+   kill -9 PID
+
+   exp:
+   以下这条命令是检查java 进程是否存在：ps -ef |grep java
+   字段含义如下：
+   UID       PID       PPID      C     STIME    TTY       TIME         CMD
+   zzw      14124   13991      0     00:38      pts/0      00:00:00    grep --color=auto dae
 
 

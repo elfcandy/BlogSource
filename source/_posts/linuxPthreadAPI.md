@@ -13,6 +13,10 @@ pthread的相关函数有以下几个：
    [参考链接-2](https://blog.csdn.net/jasonchen_gbd/article/details/51308638)
 
 
+2、int pthread_setspecific(pthread_key_t key, const void *value);
+   void *pthread_getspecific(pthread_key_t key);
+   函数 pthread_key_create() 用来创建线程私有数据;
 
-
+   [参考链接-1](https://blog.csdn.net/cywosp/article/details/26469435)
+   [参考链接-2](https://blog.csdn.net/mengxingyuanlove/article/details/50820386)
 

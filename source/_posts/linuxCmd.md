@@ -34,6 +34,18 @@ categories: LinuxCommand
    以下这条命令是检查java 进程是否存在：ps -ef |grep java
    字段含义如下：
    UID       PID       PPID      C     STIME    TTY       TIME         CMD
-   zzw      14124   13991      0     00:38      pts/0      00:00:00    grep --color=auto dae
+   zzw      14124     13991      0     00:38    pts/0     00:00:00     grep --color=auto dae
+ 
+   PPID 是父进程PID
+
+4、几个统计磁盘空间的命令
+
+   module load ncdu
+   ncdu --exclude=.snapshot
+
+   du --max-depth=1 只计算当前目录下的文件值
+
+   quota -s 磁盘配额命令，第一项带“**”说明user的配额已满
+
 
 

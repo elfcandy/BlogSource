@@ -27,7 +27,7 @@ categories: GDBCommand
 
 
 
-3、gdb中将需要的调试信息输出到文件
+3、gdb中将需要的调试信息输出到文件（这种方式将gdb本身的info输出）
    (gdb) set logging file <文件名>
    (gdb) set logging on
    (gdb) thread apply all bt
@@ -43,5 +43,7 @@ categories: GDBCommand
       打印所有线程栈信息
    4、(gdb) set logging off
       输入这个命令，关闭到指定文件的输出
+
+   如果需要记录printf的输出数据，exp：r > file.txt
 
 

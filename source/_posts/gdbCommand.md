@@ -25,3 +25,23 @@ categories: GDBCommand
 	       ......
                end退出
 
+
+
+3、gdb中将需要的调试信息输出到文件
+   (gdb) set logging file <文件名>
+   (gdb) set logging on
+   (gdb) thread apply all bt
+   (gdb) set logging off
+   (gdb) quit
+
+详细说明：
+   1、(gdb) set logging file <文件名>
+      设置输出的文件名称
+   2、(gdb) set logging on
+      输入这个命令后，此后的调试信息将输出到指定文件
+   3、(gdb) thread apply all bt
+      打印所有线程栈信息
+   4、(gdb) set logging off
+      输入这个命令，关闭到指定文件的输出
+
+

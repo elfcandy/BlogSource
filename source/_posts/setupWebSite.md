@@ -13,6 +13,7 @@ categories: 使用Hexo在github上建立website的方法
 1、需要工具：GitBash/Node.js/Typora
 
 2、将我的github上的blog仓库，clone到本地，首先使用npm install，之后hexo的原始文件需要通过hexo g命令来生成静态网页，之后可以使用hexo d将生成好的页面发送到github上。
+[参考链接](https://blog.csdn.net/Greenovia/article/details/60576985)
 
 3、github支持的个人主页格式必须为：<username>.github.io，因此github上的仓库必须以此命名。
 

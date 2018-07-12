@@ -7,8 +7,6 @@ categories: LinuxCommand
 ---
 
 
-
-
 1、man
     man命令可以在线的显示出所有Linux所支持的API函数的详细说明。
     因此，有句话叫做，有问题找男人：）（man）
@@ -37,6 +35,11 @@ categories: LinuxCommand
    zzw      14124     13991      0     00:38    pts/0     00:00:00     grep --color=auto dae
  
    PPID 是父进程PID
+   -----------
+
+   U<用户名称>：列出属于该用户的程序的状况
+   EXP: ps -U $USER
+
 
 4、几个统计磁盘空间的命令
 
@@ -47,5 +50,10 @@ categories: LinuxCommand
 
    quota -s 磁盘配额命令，第一项带“**”说明user的配额已满
 
+
+5、mount
+   mount命令用于加载文件系统到指定的加载点
+   EXP: mount -t auto /dev/cdrom /mnt/cdrom //将cdrom设备挂载到mnt/cdrom文件夹下
+   ll /mnt/cdrom                            //通过mnt/cdrom目录访问光驱内容
 
 

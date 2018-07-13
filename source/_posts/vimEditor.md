@@ -6,7 +6,7 @@ tags:
 categories: VIM Editor
 ---
 
-
+[关于VIM设置的参考链接](http://wiki.csie.ncku.edu.tw/vim/vimrc)
 
 1、VIM下自动补全变量名或函数名：ctrl + N/P；
 

@@ -6,8 +6,10 @@ tags:
 categories: linux head file
 ---
 
+1、linux的系统头文件所在位置：
+   echo 'main(){}'|gcc -E -v -
 
-1、stdint.h 说明：
+2、stdint.h 说明：
    [参考连接](https://blog.csdn.net/yucan1001/article/details/7470905)
 
 

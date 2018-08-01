@@ -46,7 +46,7 @@ categories: LinuxCommand
    module load ncdu
    ncdu --exclude=.snapshot
 
-   du --max-depth=1 只计算当前目录下的文件值
+   du --max-depth=1 ~/xxx/ 只计算当前目录下的文件值
 
    quota -s 磁盘配额命令，第一项带“**”说明user的配额已满
 

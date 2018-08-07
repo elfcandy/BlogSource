@@ -19,12 +19,16 @@ categories: LinuxCommand
         1、apropos timer；
 	2、将上面搜出的函数，使用man查看函数的具体说明；
 
+2、ldd：列出动态库依赖关系。
+        通过这命令可以检查程序使用的so库是否都已链接上。
+	链接so库的动作在makefile文件链接时完成。
+   [参考链接](https://blog.csdn.net/stpeace/article/details/47069215)
 
-2、linux下使用memleak工具来检查内存泄露
+3、linux下使用memleak工具来检查内存泄露
    valgrind工具也可以
 
 
-3、关闭进程命令
+4、关闭进程命令
    ps -ef| grep "进程名称"
    kill -9 PID
 
@@ -41,7 +45,7 @@ categories: LinuxCommand
    EXP: ps -U $USER
 
 
-4、几个统计磁盘空间的命令
+5、几个统计磁盘空间的命令
 
    module load ncdu
    ncdu --exclude=.snapshot
@@ -51,7 +55,7 @@ categories: LinuxCommand
    quota -s 磁盘配额命令，第一项带“**”说明user的配额已满
 
 
-5、mount
+6、mount
    mount命令用于加载文件系统到指定的加载点
    EXP: mount -t auto /dev/cdrom /mnt/cdrom //将cdrom设备挂载到mnt/cdrom文件夹下
    ll /mnt/cdrom                            //通过mnt/cdrom目录访问光驱内容

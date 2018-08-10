@@ -15,7 +15,6 @@ categories: GDBCommand
    p mutex_1 ---- 查看该锁的状态
 
 
-
 2、gdb在断点下批处理命令：
    A> set 断点
    B> commands 断点号
@@ -24,7 +23,6 @@ categories: GDBCommand
 	       bt
 	       ......
                end退出
-
 
 
 3、gdb中将需要的调试信息输出到文件（这种方式将gdb本身的info输出）
@@ -45,5 +43,15 @@ categories: GDBCommand
       输入这个命令，关闭到指定文件的输出
 
    如果需要记录printf的输出数据，exp：r > file.txt
+
+
+4、判断一个binary文件是否可以debug方法：
+   objdump -t your-binary | grep debug
+   如果可以debug，则会显示debug相关的一些信息，否则没有相关信息。
+
+5、gdb中设置环境变量：
+   set  env LD_LIBRARY_PATH
+   show ENV LD_LIBRARY_PATH
+   show environment
 
 

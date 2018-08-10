@@ -54,9 +54,24 @@ categories: Makefile
    只要make看到一个[.o]文件，它就会自动的把[.c]文件加在依赖关系中。
    如果make找到一个whatever.o，那么whatever.c，就会是whatever.o的依赖文件。并且 cc -c whatever.c 也会被推导出来。
 
+
 7、CFLAGS是makefile中的隐式规则里会用到的常见预定义变量，是C编译器的选项。
    注意是隐式规则！！编译时会自动加上，相当于：
    gcc -c a.c -o a.o，相当于
    gcc $(CFLAGS) -c a.c -o a.o
 
- 
+
+8、MakeFile常见预定义变量
+   AR：库文件维护程序的名称，默认值为ar
+   AS：汇编程序的名称，默认值为as
+   CC：C编译器名称，默认值为cc
+   CPP：C预编译器的名称，默认值为$(CC) -E
+   CXX: C++编译器名称，默认值为g++
+   RM：文件删除程序的名称，默认值为rm -f
+   ARFLAGS：库文件维护程序的选项，无默认值
+   ASFLAGS：汇编程序的选项，无默认值
+   CFLAGS：C编译器的选项，无默认值
+   CPPFLAGS：C预编译器的选项，无默认值
+   CXXFLAGS：C++编译器的选项，无默认值
+
+

@@ -73,4 +73,32 @@ categories: LinuxCommand
    ll /mnt/cdrom                            //通过mnt/cdrom目录访问光驱内容
 
 
+8、type / command
+   使用type/command可以检查当前命令属于内部命令还是外部命令，以及该命令的路径。
+   >> type -a 命令名
+   >> command -V 命令名
 
+   EXP1：type -a cd
+   EXP2: type -a cd uname : ls uname
+   Output:
+	cd is a shell builtin
+	uname is /usr/bin/uname
+	uname is /bin/uname
+	uname is /usr/bin/uname
+	: is a shell builtin
+	ls is aliased to `ls -F --color=auto --show-control-chars'
+	ls is /usr/bin/ls
+	ls is /bin/ls
+	ls is /usr/bin/ls
+	uname is /usr/bin/uname
+	uname is /bin/uname
+	uname is /usr/bin/uname
+
+9、sudo
+   sudo命令用来以其他身份来执行命令，预设的身份为root。
+   在/etc/sudoers中设置了可执行sudo指令的用户。
+   [参考链接](http://man.linuxde.net/sudo)
+
+10、source
+   source命令也称为“点命令”，也就是一个点符号（.）,是bash的内部命令。
+   功能：使Shell读入指定的Shell程序文件并依次执行文件中的所有语句

@@ -6,8 +6,14 @@ tags:
 categories: GDBCommand
 ---
 
+[参考链接](https://blog.csdn.net/yuyunliuhen/article/details/41673599)
 
-1、和Thread相关的命令
+1、gdb中attach的方法
+   1> 执行“ps -ef | grep 进程名”获取当前进程的PID(第二个字段)；
+   2> 启动gdb；
+   3> 在gdb命令行中，执行“attach PID”；
+
+2、和Thread相关的命令
    i threads ---- 列出所有的thread线程号
    thread 2  ---- 切换到线程2
    bt        ---- 查看这个线程对应的调用栈
@@ -15,7 +21,7 @@ categories: GDBCommand
    p mutex_1 ---- 查看该锁的状态
 
 
-2、gdb在断点下批处理命令：
+3、gdb在断点下批处理命令：
    A> set 断点
    B> commands 断点号
    	       进入之后，顺序输入需要执行的命令,
@@ -25,7 +31,7 @@ categories: GDBCommand
                end退出
 
 
-3、gdb中将需要的调试信息输出到文件（这种方式将gdb本身的info输出）
+4、gdb中将需要的调试信息输出到文件（这种方式将gdb本身的info输出）
    (gdb) set logging file <文件名>
    (gdb) set logging on
    (gdb) thread apply all bt
@@ -45,11 +51,12 @@ categories: GDBCommand
    如果需要记录printf的输出数据，exp：r > file.txt
 
 
-4、判断一个binary文件是否可以debug方法：
+5、判断一个binary文件是否可以debug方法：
    objdump -t your-binary | grep debug
    如果可以debug，则会显示debug相关的一些信息，否则没有相关信息。
 
-5、gdb中设置环境变量：
+
+6、gdb中设置环境变量：
    set  env LD_LIBRARY_PATH
    show ENV LD_LIBRARY_PATH
    show environment

@@ -13,7 +13,8 @@ categories: Makefile
 1、Makefie >& log.txt 保存输出信息
 
 
-2、make -p 列出所有的Makefile内置变量的当前值
+2、make -p 列出所有的Makefile内置变量的当前值。
+   注意：该命令会先执行make。然后再执行-p输出当前Makefile的所有内置变量的值。
 
 
 3、3个内置函数说明：

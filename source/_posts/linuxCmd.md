@@ -9,13 +9,14 @@ categories: LinuxCommand
 
 1、man
     man命令可以在线的显示出所有Linux所支持的API函数的详细说明。
-    因此，有句话叫做，有问题找男人：）（man）
-    exp：
+    因此，有句话叫做，有问题找男人:)(man)
+    EXP：
     	man open/man 2 open
 	man man
 	man fread
 
-    配合关键词搜索命令apropos，可以根据关键词搜索相应API， exp：
+    配合关键词搜索命令apropos，可以根据关键词搜索相应API，
+    EXP：
         1、apropos timer；
 	2、将上面搜出的函数，使用man查看函数的具体说明；
 
@@ -40,20 +41,19 @@ categories: LinuxCommand
 
 
 5、关闭进程命令
-   ps -ef| grep "进程名称"
-   kill -9 PID
+   1) ps -ef| grep "进程名称"
+      kill -9 PID
 
-   exp:
-   以下这条命令是检查java 进程是否存在：ps -ef |grep java
-   字段含义如下：
-   UID       PID       PPID      C     STIME    TTY       TIME         CMD
-   zzw      14124     13991      0     00:38    pts/0     00:00:00     grep --color=auto dae
- 
-   PPID 是父进程PID
-   -----------
+      EXP:
+         以下这条命令是检查java 进程是否存在：ps -ef |grep java
+         字段含义如下：
+         UID       PID       PPID      C     STIME    TTY       TIME         CMD
+         zzw      14124     13991      0     00:38    pts/0     00:00:00     grep --color=auto dae
+         PPID 是父进程PID
 
-   U<用户名称>：列出属于该用户的程序的状况
-   EXP: ps -U $USER
+   2) -U <用户名称>：列出属于该用户的程序的状况
+      EXP:
+         ps -U $USER
 
 <!--more-->
 
@@ -69,30 +69,32 @@ categories: LinuxCommand
 
 7、mount
    mount命令用于加载文件系统到指定的加载点
-   EXP: mount -t auto /dev/cdrom /mnt/cdrom //将cdrom设备挂载到mnt/cdrom文件夹下
-   ll /mnt/cdrom                            //通过mnt/cdrom目录访问光驱内容
+   EXP:
+      mount -t auto /dev/cdrom /mnt/cdrom  //将cdrom设备挂载到mnt/cdrom文件夹下
+      ll /mnt/cdrom                        //通过mnt/cdrom目录访问光驱内容
 
 
 8、type / command
    使用type/command可以检查当前命令属于内部命令还是外部命令，以及该命令的路径。
-   >> type -a 命令名
-   >> command -V 命令名
 
-   EXP1：type -a cd
-   EXP2: type -a cd uname : ls uname
-   Output:
-	cd is a shell builtin
-	uname is /usr/bin/uname
-	uname is /bin/uname
-	uname is /usr/bin/uname
-	: is a shell builtin
-	ls is aliased to `ls -F --color=auto --show-control-chars'
-	ls is /usr/bin/ls
-	ls is /bin/ls
-	ls is /usr/bin/ls
-	uname is /usr/bin/uname
-	uname is /bin/uname
-	uname is /usr/bin/uname
+   type -a 命令名
+   command -V 命令名
+
+   > EXP1：type -a cd
+   > EXP2: type -a cd uname : ls uname
+   > Output:
+   >      cd is a shell builtin
+   >      uname is /usr/bin/uname
+   >      uname is /bin/uname
+   >      uname is /usr/bin/uname
+   >      : is a shell builtin
+   >      ls is aliased to `ls -F --color=auto --show-control-chars'
+   >      ls is /usr/bin/ls
+   >      ls is /bin/ls
+   >      ls is /usr/bin/ls
+   >      uname is /usr/bin/uname
+   >      uname is /bin/uname
+   >      uname is /usr/bin/uname
 
 9、sudo
    sudo命令用来以其他身份来执行命令，预设的身份为root。

@@ -96,11 +96,19 @@ categories: LinuxCommand
    >      uname is /bin/uname
    >      uname is /usr/bin/uname
 
+
 9、sudo
    sudo命令用来以其他身份来执行命令，预设的身份为root。
    在/etc/sudoers中设置了可执行sudo指令的用户。
    [参考链接](http://man.linuxde.net/sudo)
 
+
 10、source
    source命令也称为“点命令”，也就是一个点符号（.）,是bash的内部命令。
    功能：使Shell读入指定的Shell程序文件并依次执行文件中的所有语句
+
+
+11、cat
+   cat命令连接文件并打印到标准输出设备上，cat经常用来显示文件的内容。
+   文件过大时，可增加管道命令more或less。
+   -n 对输出的文件增加行号。

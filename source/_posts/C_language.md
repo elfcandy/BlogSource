@@ -3,7 +3,7 @@ title: C-language
 comments: false
 date: 2018-06-20 20:12:01
 tags:
-categories:CLanguage
+categories: CLanguage
 ---
 
 printf的输出格式

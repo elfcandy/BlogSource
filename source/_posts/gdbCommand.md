@@ -14,11 +14,11 @@ categories: GDBCommand
    3> 在gdb命令行中，执行“attach PID”；
 
 2、和Thread相关的命令
-   i threads ---- 列出所有的thread线程号
-   thread 2  ---- 切换到线程2
-   bt        ---- 查看这个线程对应的调用栈
-   l(L) func ---- 在gdb中打印出某个function的codes
-   p mutex_1 ---- 查看该锁的状态
+   > i threads ---- 列出所有的thread线程号
+   > thread 2  ---- 切换到线程2
+   > bt        ---- 查看这个线程对应的调用栈
+   > l(L) func ---- 在gdb中打印出某个function的codes
+   > p mutex\_1 ---- 查看该锁的状态
 
 
 3、gdb在断点下批处理命令：
@@ -57,8 +57,15 @@ categories: GDBCommand
 
 
 6、gdb中设置环境变量：
-   set  env LD_LIBRARY_PATH
-   show ENV LD_LIBRARY_PATH
-   show environment
+   > set  env LD\_LIBRARY\_PATH
+   > show ENV LD\_LIBRARY\_PATH
+   > show environment
 
+7、solib-absolute-prefix和solib-search-path
+   solib-absolute-prefix设置的是被搜索文件路径的前缀，solib-absolute-prefix的值只能有一个；
+   solib-search-path设置的是被搜索文件的路径，solib-search-path可以有多个路径，中间按用:隔开；
+   EXP：
+   (gdb) info sharedlibrary                    //gdb下查看shared library方法
+   (gdb) set solib-search-path .               //假设当前目录下有文件libshared.so, 可以执行下面的命令：
+   (gdb) set solib-absolute-prefix /media/DATA //假设文件libc.so.6在/media/DATA/lib/libc.so.6下，gdb用前缀/media/DATA + /lib/libc.so.6,就找到了文件
 

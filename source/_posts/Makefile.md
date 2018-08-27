@@ -45,7 +45,7 @@ categories: Makefile
 
 
 5、内置变量$(MAKE) 就是预设的 make，用于make这个命令的名称(或者路径)
-   通过make -p可以查到 MAKE = $(MAKE_COMMAND), 而MAKE_COMMAND := make
+   通过make -p可以查到 MAKE = $(MAKE\_COMMAND), 而MAKE\_COMMAND := make
 
 
 6、makefile的自动推导

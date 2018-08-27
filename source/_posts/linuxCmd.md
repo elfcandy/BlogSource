@@ -113,6 +113,7 @@ categories: LinuxCommand
    文件过大时，可增加管道命令more或less。
    -n 对输出的文件增加行号。
 
+
 12、tail
    将某个档案文件的最后几行显示到终端上，假设该档案有更新，tail会自己主动刷新，确保你看到最新的档案内容。
    参数举例：
@@ -125,9 +126,8 @@ categories: LinuxCommand
         B> tail -n 20 filename
            显示filename最后20行
    相关命令：
-   cat 从第一行开始显示档案内容。
-   tac 从最后一行開始显示档案内容。
-   more 分页显示档案内容。less 与 more 相似，但支持向前翻页
-   head 仅仅显示前面几行
-   tail 仅仅显示后面几行
-
+        > cat 从第一行开始显示档案内容；
+        > tac 从最后一行開始显示档案内容；
+        > more 分页显示档案内容。less 与 more 相似，但支持向前翻页；
+        > head 仅仅显示前面几行；
+        > tail 仅仅显示后面几行；

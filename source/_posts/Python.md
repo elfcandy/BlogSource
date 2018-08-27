@@ -11,7 +11,8 @@ categories: Python
    启动：python -m pdb filename.py [argument1...，argument2...]
 
    (pdb)下：
-     > help 显示所有pdb调试命令
+
+     > help：显示所有pdb调试命令
 
      > 断点相关：
 	   >> b ([file:]lineno | function) [, condition]：根据行号或文件名插入断点

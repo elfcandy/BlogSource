@@ -66,3 +66,8 @@ GCC工具链包括GCC、Binutils、C运行库等。
       objdump -D：可以对elf文件进行反汇编；
       objdump -S：可以对elf文件进行反汇编，并且将其C语言源代码混合显示出来；
 
+5、查看一个elf文件所用的gcc版本的三种方式
+   > # strings -a a.out |grep GCC
+   > # readelf -p .comment a.out
+   > # objdump -s --section .comment a.out
+

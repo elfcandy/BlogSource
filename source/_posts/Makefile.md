@@ -76,3 +76,15 @@ categories: Makefile
    CXXFLAGS：C++编译器的选项，无默认值
 
 
+9、在Makefile文件中打印字符串的方法
+   > 有两类命令可以打印字符串：
+     >> 第一类：
+     >>> $(info $(TARGET_DEVICE))
+     >>> $(warning "here add the debug info")
+     >>> $(error "error: this will stop the compile") //error会停止当前makefile的编译
+
+     >> 第二类：
+     >>> @echo "The compiler name is \"${Name}\";"
+     >>> @echo $(Name)
+   > 以上命两类命令的前面需要有TAB键；
+   > 第二类命令需要放置在“目标:依赖”下，才能被执行；第一类不需要；

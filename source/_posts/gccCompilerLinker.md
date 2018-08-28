@@ -66,8 +66,12 @@ GCC工具链包括GCC、Binutils、C运行库等。
       objdump -D：可以对elf文件进行反汇编；
       objdump -S：可以对elf文件进行反汇编，并且将其C语言源代码混合显示出来；
 
-5、查看一个elf文件所用的gcc版本的三种方式
-   > # strings -a a.out |grep GCC
+5、查看一个elf文件所用的gcc版本的几种方式
+   > # readelf -wi a.out | grep GNU (优先选项，最为准确)
+
+   > # strings -a a.out | grep gcc(大写GCC结果不同)
    > # readelf -p .comment a.out
    > # objdump -s --section .comment a.out
+   [参考链接](https://stackoverflow.com/questions/2387040/how-to-retrieve-the-gcc-version-used-to-compile-a-given-elf-executable)
+   根据该链接描述，只能显示elf文件的运行时gcc版本号，而不能显示编译时的gcc版本号；
 

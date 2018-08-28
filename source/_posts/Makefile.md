@@ -98,3 +98,7 @@ categories: Makefile
 
    makefile的基本规则为：
        目标:依赖
+
+12、产生镜像文件
+   基本的实现方法是：注意Wl逗号后面跟着需要传递的参数，逗号后面不能存在空格，否则出现错误。
+   gcc -Wl,-Map=file.map file.c -o target

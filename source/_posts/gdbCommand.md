@@ -8,8 +8,11 @@ categories: GDBCommand
 
 [参考链接](https://blog.csdn.net/yuyunliuhen/article/details/41673599)
 
+
 1、gdb启动时，相当于启动一个新的shell，会再次加载~目录下.bashrc/.cshrc.user文件；
    [参考链接](http://blog.sina.com.cn/s/blog_80ce3a550101m3l5.html)
+   之前遇到的问题便由此造成，需要将所有的设置均写入.bashrc/.cshrc.user文件中，以确保terminal和gdb的运行环境一致；
+
 
 2、gdb中attach的方法
    1> 执行“ps -ef | grep 进程名”获取当前进程的PID(第二个字段)；

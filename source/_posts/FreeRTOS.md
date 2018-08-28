@@ -15,6 +15,7 @@ categories: FreeRTOS
 
 [FreeRTOS学习资料](https://blog.csdn.net/robertsong2004/article/details/52798564)
 
+[github](https://github.com/aws/amazon-freertos)
 
 1、FreeRTOS 是一个相对其他操作系統而言较小的操作系統。最小化的 FreeRTOS 核心仅包括 3 个 .c 文件(tasks.c、queue.c、list.c)和少数头文件，
    总共不到 9000 行代码，还包括了注释和空行。一个典型的编译后的 binary（二进制码）小于 10 KB。

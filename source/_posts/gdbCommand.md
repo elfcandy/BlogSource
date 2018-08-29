@@ -77,3 +77,26 @@ categories: GDBCommand
    (gdb) set solib-search-path .               //假设当前目录下有文件libshared.so, 可以执行下面的命令：
    (gdb) set solib-absolute-prefix /media/DATA //假设文件libc.so.6在/media/DATA/lib/libc.so.6下，gdb用前缀/media/DATA + /lib/libc.so.6,就找到了文件
 
+
+9、临时改变变量的值：set i=3
+
+
+10、查看类的结构：ptype node
+
+
+11、打印其他格式的值：
+    p/x i    //打印hex
+    p/c i    //打印字符
+    p/s i    //打印字符串
+    p/f i    //打印float
+
+
+12、查看当前stack中的变量：info local
+
+
+13、保存已设置的断点
+    > 在gdb中，可以使用如下命令将设置的断点保存下来：
+    > (gdb) save breakpoints save-file-name
+
+    > 下次调试时，可以使用如下命令批量设置保存的断点：
+    > (gdb) source save-file-name

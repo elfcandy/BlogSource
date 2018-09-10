@@ -1,9 +1,9 @@
 ---
-title: C-language
+title: C
 comments: false
 date: 2018-06-20 20:12:01
 tags:
-categories: CLanguage
+categories: C
 ---
 
 printf的输出格式

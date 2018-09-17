@@ -6,6 +6,11 @@ tags:
 categories: C++
 ---
 
+[C++教程 1](http://c.biancheng.net/cplus/)
+[C++教程 2](http://www.runoob.com/cplusplus/cpp-tutorial.html)
+
+
+
 1、reinterpret\_cast是C++里的强制类型转换符。
 
 2、namespace命名空间：
@@ -50,3 +55,9 @@ categories: C++
 
    [namespace & using\_1:](https://blog.csdn.net/u010003835/article/details/47402549)
    [namespace & using\_2:](https://blog.csdn.net/fengbingchun/article/details/78575978)
+
+
+4、C++单例模式
+   单例模式是最常用的设计模式之一，对单例的理解：一个类有且只有一个对象（只能实例化一次，不能进行拷贝，赋值），并提供一个全局访问接口。例如windows中的任务管理器，打印机管理程序等。
+  
+   [参考链接](https://www.cnblogs.com/chengkeke/p/5417371.html)

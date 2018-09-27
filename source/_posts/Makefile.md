@@ -86,7 +86,7 @@ categories: Makefile
      >> 第二类：
      >>> @echo "The compiler name is \"${Name}\";"
      >>> @echo $(Name)
-   > 以上命两类命令的前面需要有TAB键；
+   > 以上第二类命令的前面需要有TAB键？第一类不需要；
    > 第二类命令需要放置在“目标:依赖”下，才能被执行；第一类不需要；
 
 10、@放在行首，通常用在“规则”行中，表示不显示命令本身，而只显示它的结果；
@@ -102,3 +102,9 @@ categories: Makefile
 12、产生镜像文件
    基本的实现方法是：注意Wl逗号后面跟着需要传递的参数，逗号后面不能存在空格，否则出现错误。
    gcc -Wl,-Map=file.map file.c -o target
+
+13、Makefile中执行shell命令的方法
+   举例说明：A\_VAR = $(shell uname --nodename)
+
+14、Makefile查找变量中的字符串，可以使用findstring，filter函数，具体用法：
+   [参见链接](https://blog.csdn.net/u013925378/article/details/51263239)

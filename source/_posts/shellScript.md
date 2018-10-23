@@ -134,3 +134,22 @@ $* 和 $@ 都表示传递给函数或脚本的所有参数，不被双引号(" "
          commands
       }
    3) 调用方式：使用函数名即可
+
+
+13> 一种在一个脚本同时在bash和csh上运行的方法(sed分支和预测，shell的内建和外部命令)：
+   1) 第一种实现方式：
+      $(echo "$SHELL" | sed '{
+      s/\/bin\/bash/export/
+      t
+      s/\/bin\/tcsh/setenv/
+      }') LD\_LIBRARY\_PATH=$PWD/third-party/Tcl/x86\_64/lib/:$LD\_LIBRARY\_PATH
+
+   2) 第二种实现方式：
+      echo $SHELL | sed 's/\/bin\/bash/export LD_LIBRARY_PATH=$PWD\/third-party\/:$LD_LIBRARY_PATH/;t;s/\/bin\/tcsh/setenv LD_LIBRARY_PATH $PWD\/third-party\/:$LD_LIBRARY_PATH/'>tmp.sh
+
+   3) 第三种实现方式：
+      `echo $SHELL | sed 's/\/bin\/bash/export LD_LIBRARY_PATH=$PWD\/third-party\/:$LD_LIBRARY_PATH/;t;s/\/bin\/tcsh/ls -al/'`
+      这种方式下，setenv命令不能正常执行，ls命令可以。
+
+
+

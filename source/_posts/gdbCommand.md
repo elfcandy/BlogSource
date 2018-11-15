@@ -86,6 +86,9 @@ categories: GDBCommand
 
 11、打印其他格式的值：
     p/x i    //打印hex
+    p/u i    //打印16进制无符号
+    p/d i    //打印十进制
+    p/t i    //打印二进制
     p/c i    //打印字符
     p/s i    //打印字符串
     p/f i    //打印float
@@ -100,3 +103,68 @@ categories: GDBCommand
 
     > 下次调试时，可以使用如下命令批量设置保存的断点：
     > (gdb) source save-file-name
+
+14、设置基于循环次数的断点
+    > set $cnt=0
+    > b xxx.c:123 if ++$cnt==20
+
+15、gdb启动
+    > gdb xxx.exe
+    > gdb
+      file xxx.exe --> for location dbg
+      load xxx.exe --> for remote dbg
+
+17、run的方法
+    > run parameter1 parameter2 ...
+    > set args parameter1 parameter2 ...
+      show args
+      run
+
+18、ignore 断点编号 忽略次数
+
+19、catch event
+    当事件event发生的时候，程序停止运行；
+    catch event只设置一次捕捉点，当程序停住以后，被自动删除；
+    event列表：
+             throw  C++抛出异常
+             catch  C++捕捉到异常
+              exec  exec被调用
+              fork  fork被调用
+             vfork  vfork被调用
+      load libname  加载名为libname库(HP-UX可用)
+    unload libname  卸载名为libname库(HP-UX可用)
+
+20、print
+    > pt 按结构体格式打印结构体值
+    > 打印数组值：
+      p/t *array@30      :按二进制打印array的前30个数
+      p/t *(array+10)@30 :按二进制打印从array第10个数起的30个数
+
+21、examine查看内存
+    命令格式: x/[option] addr
+              option: n，表示内存的长度。
+                      f，表示显示个格式(可以参照之前格式化输出部分)
+	              u，默认是4个字节；也可以是b 单字节，h 双字节，w四字节，g 八字节
+              addr：内存地址，也是即将要取值的起始地址。
+    默认x addr
+
+22、函数访问
+    > 调用
+      call和print可以调用被测程序中的函数
+      exp：call tempFunc(2，2)
+    > 返回
+      finish：连续运行当前函数直到返回为止，然后停下来等待命令。
+      return：使用return命令取消当前函数的执行，并立即返回
+
+23、堆栈
+    > frame args
+      移动到args指定的栈帧中去，并打印选中的栈的信息。args可以时帧编号或者时帧的地址。如果没有args，则打印当前帧的信息;
+    > select-frame args
+      移动到指定的帧中去，不打印信息;
+    > frame 打印当前栈帧的简要信息。
+    > 在栈帧之间切换，up n或者down n，n默认为1；
+
+24、gdb中加载脚本
+    > 在启动gdb的时候，会在当前目录下查找“.gdbinit”这个文件，并把它的内容作为gdb命令行解释，所以我们可以把脚本命名为“.gdbinit”，这样在启动的时候就会处理这些命令；
+    > gdb运行期间，可以使用source script-file来解释gdb命令脚本；
+
